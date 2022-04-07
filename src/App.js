@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Navigate } from "react-router-dom";
 
-function App() {
+import "bootstrap/dist/css/bootstrap.min.css";
+
+/** Styles */
+import "./App.css";
+
+/** Components */
+import Header from "./components/Header";
+import SideBar from "./components/SideBar";
+import IntroductionReact from "./pages/IntroductionReact";
+import ReactFundamental from "./pages/ReactFundamental";
+import ReactRouting from "./pages/ReactRouting";
+import EventHandling from "./pages/EventHandling";
+import ReactHooks from "./pages/ReactHooks";
+import ReactForm from "./pages/ReactForm";
+import Redux from "./pages/Redux";
+import Testing from "./pages/Testing";
+import Deployment from "./pages/Deployment";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header title="Malvino (Kelas A - ReactJS)" />
+
+      <div className="wrapper">
+        <SideBar />
+        <Routes>
+          <Route path="/" element={<IntroductionReact />} />
+          <Route path="/introduction-react" element={<IntroductionReact />} />
+          <Route path="/react-fundamental" element={<ReactFundamental />} />
+          <Route path="/react-routing" element={<ReactRouting />} />
+          <Route path="/event-handling" element={<EventHandling />} />
+          <Route path="/react-hooks" element={<ReactHooks />} />
+          <Route path="/react-form" element={<ReactForm />} />
+          <Route path="/redux" element={<Redux />} />
+          <Route path="/testing" element={<Testing />} />
+          <Route path="/deployment" element={<Deployment />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
