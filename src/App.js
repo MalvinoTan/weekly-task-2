@@ -17,6 +17,7 @@ import ReactForm from "./pages/ReactForm";
 import Redux from "./pages/Redux";
 import Testing from "./pages/Testing";
 import Deployment from "./pages/Deployment";
+import IntroductionAlgorithm from "./pages/IntroductionAlgorithm";
 
 const App = () => {
   return (
@@ -24,7 +25,9 @@ const App = () => {
       <Header title="Malvino (Kelas A - ReactJS)" />
 
       <div className="wrapper">
+
         <SideBar />
+
         <Routes>
           <Route path="/" element={<IntroductionReact />} />
           <Route path="/introduction-react" element={<IntroductionReact />} />
@@ -36,6 +39,7 @@ const App = () => {
           <Route path="/redux" element={<Redux />} />
           <Route path="/testing" element={<Testing />} />
           <Route path="/deployment" element={<Deployment />} />
+          <Route path="/introduction-algorithm" element={<IntroductionAlgorithm />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>

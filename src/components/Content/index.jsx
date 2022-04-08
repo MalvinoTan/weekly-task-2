@@ -12,6 +12,8 @@ const Content = ({ data }) => {
 
     const summaryFilePath = require(`../../assets/summary/${summaryFile}`);
 
+    const taskLinkType = typeof taskLink;
+
     return (
         <div className={styles.content_container}>
             <div className={styles.content_item}>
@@ -26,19 +28,25 @@ const Content = ({ data }) => {
             <div className={styles.content_item}>
                 <h4>Screenshots</h4>
                 {
-                    screenshotsPath.length !== 0 ?
-                        screenshotsPath.map((screenshotPath, screenshotPathIdx) => {
-                            return (
-                                <img src={screenshotPath} alt="hasil" key={screenshotPathIdx} />
-                            );
-                        }) :
-                        (<p className={styles.no_screenshot}>Tugas Ini Tidak Memiliki Screenshot</p>)
+                    screenshotsPath.map((screenshotPath, screenshotPathIdx) => {
+                        return (
+                            <img src={screenshotPath} alt="hasil" key={screenshotPathIdx} />
+                        );
+                    })
                 }
             </div>
 
             <div className={styles.content_item}>
                 <h4>Link Tugas</h4>
-                <Button href={taskLink} target="_blank">Link Tugas</Button>
+                {
+                    taskLinkType === "object" ?
+                        <>
+                            <Button href={taskLink[0]} target="_blank">Link Flowchart Soal 1</Button><br /><br />
+                            <Button href={taskLink[1]} target="_blank">Link Flowchart Soal 2</Button><br /><br />
+                            <Button href={taskLink[2]} target="_blank">Link Repositori</Button>
+                        </> :
+                        <Button href={taskLink} target="_blank">Link Tugas</Button>
+                }
             </div>
 
             <div className={styles.content_item}>

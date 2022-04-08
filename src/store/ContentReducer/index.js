@@ -99,6 +99,23 @@ const initialState = {
             summaryLink: "https://github.com/MalvinoTan/react_malvino-austin-tanura/blob/master/18_Deployment/summary.md",
             summaryFile: "deployment_summary.md",
         },
+        {
+            title: "Introduction Algorithm",
+            description: "Tugas Introduction Algorithm yaitu membuat flowchart dan kode program untuk mencari bilangan prima dan kasus lampu mati/menyala",
+            screenshots: [
+                "introduction_algorithm-1.png",
+                "introduction_algorithm-2.png",
+                "introduction_algorithm-3.jpg",
+                "introduction_algorithm-4.jpg",
+            ],
+            taskLink: [
+                "https://whimsical.com/introduction-to-algorithm-soal-1-EsTcCBwYYQU3ie335oUJp",
+                "https://whimsical.com/introduction-to-algorithm-soal-2-V1Zhn7V1kcvpwNfPFA1qRW",
+                "https://github.com/MalvinoTan/tugas-introduction-algorithm.git",
+            ],
+            summaryLink: "https://github.com/MalvinoTan/react_malvino-austin-tanura/blob/master/19_Introduction%20Algorithm/summary.md",
+            summaryFile: "introduction_algorithm_summary.md",
+        },
     ],
 };
 

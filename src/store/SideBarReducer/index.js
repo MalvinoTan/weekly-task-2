@@ -38,6 +38,10 @@ const initialState = {
             title: "18_Deployment",
             path: "/deployment",
         },
+        {
+            title: "19_Introduction Algorithm",
+            path: "/introduction-algorithm",
+        },
     ],
 };
 
